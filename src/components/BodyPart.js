@@ -5,7 +5,7 @@ const BodyPart = ({
     setStage
 }) => {
     return (
-        <div>
+        <div className={style.BodyPartContainer}>
             Body Part
         </div>
     )
