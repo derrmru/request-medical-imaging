@@ -1,0 +1,36 @@
+.calendarContainer {
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid var(--prime-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.dateColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.dateTitle {
+    margin: 10px auto 20px auto;
+}
+
+.dateTime {
+    margin: 20px auto 40px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: .4s;
+}
+
+@media (hover:hover) {
+    .dateTime:hover {
+        color: var(--second-color);
+    }
+}

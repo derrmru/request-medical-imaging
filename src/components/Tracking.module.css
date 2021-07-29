@@ -1,0 +1,30 @@
+.trackingContainer {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 20px;
+    border-bottom: 3px solid var(--prime-color);
+    border-top: 3px solid var(--prime-color);
+    padding: 20px 10px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.change {
+    color: var(--second-color);
+    font-size: 12px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+@media (hover:hover) {
+    .change:hover {
+        color: var(--prime-color);
+    }
+}

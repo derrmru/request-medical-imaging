@@ -1,0 +1,7 @@
+.scheduleContainer {
+    width: 90%;
+    margin: 30px auto;
+    border: 3px dashed var(--prime-color);
+    padding: 20px;
+    box-sizing: border-box;
+}

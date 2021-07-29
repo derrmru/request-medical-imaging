@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+import { useState } from 'react'
+import Schedule from './components/Schedule'
+import Tracking from './components/Tracking'
+import BodyPart from './components/BodyPart'
 import './App.css';
 
-function App() {
+const App = () => {
+  //contain state in single object
+  const [fields, setFields] = useState({});
+
+  //functional update of fields object
+  const updateFields = (name, value) => {
+    let temp = { ...fields }
+    temp[name] = value
+    setFields(temp)
+  }
+
+  //Store current stage of applicaton in state
+  const [stage, setStage] = useState('schedule')
+
+  console.log(fields)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="right-column">
+        <Tracking 
+          fields={fields}
+          updateFields={(name, value) => updateFields(name, value)}
+          setStage={(stage) => setStage(stage)}
+          setFields={(obj) => setFields(obj)}
+        />
+      </div>
+      <div className="left-column">
+        {stage === 'schedule' ?
+          <Schedule 
+            updateFields={(name, value) => updateFields(name, value)}
+            setStage={(stage) => setStage(stage)}
+          /> :
+          stage === 'body_part' &&
+            <BodyPart 
+              updateFields={(name, value) => updateFields(name, value)}
+              setStage={(stage) => setStage(stage)}
+            />
+        }
+      </div>
     </div>
   );
 }
