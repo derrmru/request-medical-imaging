@@ -1,0 +1,11 @@
+.st0 {
+  fill: none;
+  stroke: var(--prime-color);
+  stroke-miterlimit: 10;
+}
+.st1 {
+  fill: none;
+  stroke: #75c4ba49;
+  stroke-miterlimit: 10;
+  cursor: pointer;
+}
