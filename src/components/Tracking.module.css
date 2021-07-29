@@ -2,6 +2,7 @@
     position: sticky;
     position: -webkit-sticky;
     top: 20px;
+    right: 0;
     border-bottom: 3px solid var(--prime-color);
     border-top: 3px solid var(--prime-color);
     padding: 20px 10px;
