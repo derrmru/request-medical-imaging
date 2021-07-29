@@ -14,7 +14,7 @@ const ScheduleHeader = ({
                     >
                         &#8678;
                 </div>
-                <div className={style.date}>{startDate.toDateString()} - {newDate(7).toDateString()}</div>
+                <div className={style.date}>{startDate.toDateString().substr(4)} - {newDate(7).toDateString().substr(4)}</div>
                 <div 
                     className={style.arrow}
                     onClick={() => setStartDate(newDate(7))}

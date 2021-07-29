@@ -11,7 +11,6 @@
     box-sizing: border-box;
     border: 1px solid var(--prime-color);
     width: 50%;
-    font-size: 14px;
 }
 
 .arrow {
@@ -20,7 +19,6 @@
     border: 1px solid var(--prime-color);
     cursor: pointer;
     transition: .4s;
-    font-size: 14px;
 }
 
 @media (hover:hover) {
@@ -29,3 +27,9 @@
         color: var(--second-color);
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .date {
+        width: 70%;
+    }
+} 

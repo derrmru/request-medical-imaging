@@ -14,11 +14,14 @@
 
 .right-column {
   width: 25%;
+  height: 100%;
   text-align: center;
+  position: relative;
 }
 
 .left-column {
   width: 75%;
+  height: 100%;
   text-align: center;
 }
 
@@ -59,3 +62,12 @@ hr {
   0% {opacity:0;}
   100% {opacity:1;}
 }
+
+@media only screen and (max-width: 1120px) {
+  .right-column {
+      display: none;
+  }
+  .left-column {
+    width: 100%;
+  }
+} 

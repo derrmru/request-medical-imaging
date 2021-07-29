@@ -18,7 +18,7 @@ const Schedule = ({
     }
 
     return (
-        <>
+        <div className='fade-in'>
             <h2>Availability</h2>
             <p>Please select your preferred date and time.</p>
             <div className={style.scheduleContainer}>
@@ -33,7 +33,7 @@ const Schedule = ({
                     setStage={(stage) => setStage(stage)}
                 />
             </div>
-        </>
+        </div>
     )
 }
 

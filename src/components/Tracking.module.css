@@ -10,6 +10,12 @@
     text-align: left;
 }
 
+.header {
+    margin: 0;
+    border-bottom: 1px solid var(--prime-color);
+    padding: 0 0 20px 0;
+}
+
 .line {
     display: flex;
     flex-direction: row;
@@ -27,4 +33,4 @@
     .change:hover {
         color: var(--prime-color);
     }
-}
+} 

@@ -7,7 +7,6 @@
     justify-content: space-evenly;
     padding: 20px;
     box-sizing: border-box;
-    font-size: 14px;
 }
 
 .dateColumn {
@@ -34,3 +33,9 @@
         color: var(--second-color);
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .dateColumn {
+        padding: 10px 5px;
+    }
+} 

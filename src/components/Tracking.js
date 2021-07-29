@@ -14,13 +14,18 @@ const Tracking = ({
     return (
         <>
         {
-            fields.selected && <div 
+            <div 
                 className={style.trackingContainer + ' fade-in'}
                 >
             {
+                !fields.selected && <>
+                    <h3 className={style.header + ' fade-in'}>Please Select Your Preferred Timeslot & Date</h3>
+                </>
+            }
+            {
                 fields.selected && <>
-                    <h3 style={{margin: 0, borderBottom: '1px solid var(--prime-color)', padding: '0 0 20px 0'}}>Your Selection</h3>
-                    <p className={style.line}>
+                    <h3 className={style.header + ' fade-in'}>Your Selection</h3>
+                    <p className={style.line + ' fade-in'}>
                         <span>Selected Date: {fields.selected[0].toDateString()}</span>
                         <span 
                             className={style.change}
@@ -29,7 +34,7 @@ const Tracking = ({
                                 { } change
                         </span>
                     </p>
-                    <p className={style.line}>
+                    <p className={style.line + ' fade-in'}>
                         <span>Selected Time: {fields.selected[1]}</span>
                         <span 
                             className={style.change}

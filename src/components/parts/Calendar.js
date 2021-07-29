@@ -27,7 +27,7 @@ const Calendar = ({
                         key={'date' + i}
                         className={style.dateColumn}
                     >
-                        <div className={style.dateTitle}><strong>{thisDate.toDateString().substr(0, 10)}</strong></div>
+                        <div className={style.dateTitle}><strong>{thisDate.toDateString().substr(0, 3)} {thisDate.getDate()}/{thisDate.getMonth() + 1}</strong></div>
                         <div 
                             className={style.dateTime}
                             onClick={() => passed(thisDate, 9) ?
