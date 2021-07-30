@@ -6,9 +6,16 @@ const Tracking = ({
     setStage,
     setFields
 }) => {
+    //revert to time date selection and clear state
     const change = () => {
         setFields({})
         setStage('schedule')
+    }
+
+    //revert to area of body selection and clear following state
+    const changeArea = () => {
+        setFields({selected: fields.selected})
+        setStage('body_part')
     }
 
     return (
@@ -48,10 +55,12 @@ const Tracking = ({
             {
                 fields.area && <>
                     <p className={style.line + ' fade-in'}>
-                        <span>Area of Body: {fields.area[0].toUpperCase() + fields.area.slice(1).toLowerCase()}</span>
+                        <span>Area of Body: {fields.area.split(' ').map((word, i) => {
+                            return word[0].toUpperCase() + word.slice(1).toLowerCase()}
+                        ).join(' ')}</span>
                         <span 
                             className={style.change}
-                            onClick={() => change()}
+                            onClick={() => changeArea()}
                             >
                                 { } change
                         </span>
