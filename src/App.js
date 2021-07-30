@@ -39,6 +39,7 @@ const App = () => {
           stage === 'body_part' &&
             <BodyPart 
               updateFields={(name, value) => updateFields(name, value)}
+              fields={fields}
               setStage={(stage) => setStage(stage)}
             />
         }

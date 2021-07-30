@@ -45,6 +45,19 @@ const Tracking = ({
                     </p>
                 </>
             }
+            {
+                fields.area && <>
+                    <p className={style.line + ' fade-in'}>
+                        <span>Area of Body: {fields.area[0].toUpperCase() + fields.area.slice(1).toLowerCase()}</span>
+                        <span 
+                            className={style.change}
+                            onClick={() => change()}
+                            >
+                                { } change
+                        </span>
+                    </p>
+                </>
+            }
         </div>
         }
         </>

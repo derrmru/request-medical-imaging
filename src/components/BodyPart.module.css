@@ -4,8 +4,13 @@
   stroke-miterlimit: 10;
 }
 .st1 {
-  fill: none;
-  stroke: #75c4ba49;
+  stroke: #75c4ba38;
   stroke-miterlimit: 10;
   cursor: pointer;
+  transition: .4s;
+  fill: #ffffff00;
+}
+
+.st1:hover {
+    fill: #75c4ba38;
 }
